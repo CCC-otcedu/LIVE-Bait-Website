@@ -1,0 +1,273 @@
+/*
+Chad Coburn, 7-19-2021
+A CSS stylesheet for the LIVE Bait Website assignment submission in CIS-130
+*/
+
+
+/*
+Fishing lake themed color palette for base elements
+- sky blue = #c2def6
+- navy blue = #204554
+- grey = #626c69
+- pale pinkish = #bdbbbd
+- watery blue #a4c4dc
+*/
+
+
+
+/*
+Section for the core body design for the website
+*/
+
+body {
+  background-color: #a4c4dc;
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  color: #204554;
+  border: 6px solid blue;
+  box-shadow: 5px 5px 30px black;
+  margin: 30px 50px;
+  line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+  box-shadow: 5px 5px 30px black;
+}
+
+.header-box {
+  font-size: 18pt;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  text-shadow: 2pt 2pt white;
+  text-decoration: underline;
+  width: 100%;
+  background-image:url("lake.jpg");
+  background-size: cover;
+}
+
+
+/*
+Section for the navigation panel of the website
+*/
+
+.navbox {
+  border-radius: 20px;
+}
+
+.navbox ul{
+  list-style-type: none;
+  display: grid;
+  grid-gap: 25px;
+  padding: 0;
+  overflow: hidden;
+  width: 200px;
+  background-color: grey;
+  border: 4px solid #204554;
+}
+
+.navbox li{
+  border-bottom: 4px solid #a4c4dc;
+  display: block;
+  padding: 12px;
+  background-color: #bdbbbd;
+  color: #ce0000;
+  text-decoration: none;
+  font-style: normal;
+  text-shadow: 1px 1px black;
+}
+
+.navbox li a{
+  display: block;
+  padding: 12px;
+  background-color: #c2def6;
+  color: black;
+  text-decoration: none;
+  font-style: normal;
+  text-shadow: 1px 1px black;
+}
+
+.navbox li a:hover {
+  background-color: ivory;
+}
+
+.navbox li a:active {
+  background-color: ivory;
+}
+
+/*
+This section is for the grid contained content in this website
+*/
+
+.container {
+  background: #626c69;
+  display: grid;
+  grid-gap: 25px;
+}
+
+.grid-container {
+  max-width: 1300px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+  'top-box'
+  'info-box';
+}
+
+.top-box {
+  max-width: 650px;
+  margin: 40px auto 0 auto;
+  background-color: ivory;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 25px 5px;
+  display: grid;
+  grid-gap: 30px;
+}
+
+.top-box p {
+  font-size: 16pt;
+  font-family: Arial, sans-serif;
+}
+
+.top-box ul {
+  list-style: disc;
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.info-box {
+  max-width: 400px;
+  background-color: #bdbbbd;
+  font-style: italic;
+  font-weight: lighter;
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  box-shadow: 5px 5px 30px black;
+}
+
+.column-box {
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  background-color: ivory;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 25px 5px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  background-image: url("livewell.jpg");
+  background-size: cover;
+  box-shadow: 5px 5px 30px black;
+}
+
+.other-box {
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  padding: 25px 5px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.column {
+  border: 2px solid blue;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #bdbbbd;
+  box-shadow: 5px 5px 30px black;
+  object-fit: contain;
+}
+
+.column h2 {
+  font-size: 16pt;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.column p {
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  font-weight: lighter;
+  color: #6c5235;
+}
+
+.column ul {
+  list-style: none;
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.column li {
+  text-align: left;
+}
+
+.column em {
+  font-weight: lighter;
+}
+
+.column img {
+  object-fit: contain;
+}
+
+.video-box {
+  max-width: 850px;
+  background-color: #bdbbbd;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px black;
+  object-fit: contain;
+}
+
+/*
+Media screen viewport section
+*/
+
+@media screen and (max-width: 700px) {
+  .header-box {
+    display: block;
+    width: 100%;
+  }
+  .navbox {
+    display: block;
+    width: 100%;
+    align-items: center;
+  }
+  .container {
+    display: block;
+  }
+  .grid-container {
+    display: block;
+    width: 100%;
+  }
+  .column-box {
+    display: block;
+    width: 100%;
+  }
+  .column {
+    display: block;
+    width: 100%;
+  }
+  .other-box {
+    display: block;
+    width: 100%;
+  }
+  .info-box {
+    display: block;
+    width: 100%;
+  }
+  .video-box {
+    display: block;
+    width: 100%;
+  }
+}
